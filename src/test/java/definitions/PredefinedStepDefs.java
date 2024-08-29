@@ -5,6 +5,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.commons.io.FileUtils;
+import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -13,7 +14,10 @@ import java.io.File;
 import java.time.Duration;
 import java.util.Date;
 import java.util.Iterator;
+import java.util.List;
+
 import static org.assertj.core.api.Assertions.*;
+
 import static support.TestContext.getDriver;
 
 public class PredefinedStepDefs {
@@ -220,6 +224,13 @@ public class PredefinedStepDefs {
     @When("I mouse over element with xpath {string}")
     public void iMouseOverElementWithXpath(String xpath) {
         new Actions(getDriver()).moveToElement(getDriver().findElement(By.xpath(xpath))).perform();
+    }
+
+    @And("at least one {string} element should contain the text {string}")
+    public void at_least_one_element_should_contain_the_text(String element, String text) {
+        List<WebElement> elements = getDriver().findElements(By.xpath("//" + element));
+        boolean found = elements.stream().anyMatch(el -> el.getText().contains(text));
+        Assert.assertTrue("Text '" + text + "' not found in any <" + element + "> element", found);
     }
 
 
