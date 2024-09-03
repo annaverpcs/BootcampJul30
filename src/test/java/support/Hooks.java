@@ -24,5 +24,6 @@ public class Hooks {
             scenario.attach(screenshot, "image/png", "Screenshot");
         }
         TestContext.teardown();
+        getDriver().quit();
     }
 }
