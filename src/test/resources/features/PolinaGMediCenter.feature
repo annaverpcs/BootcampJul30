@@ -1,7 +1,12 @@
+@medicenter
 Feature: Medical Center testing
+<<<<<<< HEAD
   Background: 
     Given I open url "https://medicenter-qa2.vercel.app/"
 
+=======
+  @medicenter
+>>>>>>> main
   Scenario: Login as Administrator
     When I click on element with xpath "//button[contains(text(),'Login')]"
     Then I wait for element with xpath "//label[@for='email']" to be present
@@ -36,6 +41,7 @@ Feature: Medical Center testing
     And I click on element with xpath "//button[contains(text), '10:15 AM']"
     Then I click on element with xpath "/button[contains(text), 'Save']"
 
+<<<<<<< HEAD
   # patient verify that appointment was created
     Then I wait for element with xpath "//p[contains(text(), 'Check results')]" to be present
     Then element with xpath "//p[contains(text(), 'Check results')]/ancestor::article/div[1]/h3" should contain text "Wednesday 30 September 2024"
@@ -48,6 +54,11 @@ Feature: Medical Center testing
     
     
   Scenario: Delete appointment as patient
+=======
+#Feature: Delete my appointment as patient
+  Scenario: Delete my appointment
+    Given I open url "https://medicenter-qa2.vercel.app/auth/sign_in"
+>>>>>>> main
     When I type "patientpcs1@gmail.com" into element with xpath "//input[@id='email']"
     When I type "abc123" into element with xpath "//input[@id='password']"
     And I click on element with xpath "//button[contains(text(),'Sign in')]"

@@ -1,5 +1,5 @@
 #Author: Ruslan
-
+@medicenter
   Feature: Medical Center Test Scenarios for User Story 6
 
     Background: Login as patient with valid data
