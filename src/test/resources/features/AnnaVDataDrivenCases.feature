@@ -1,5 +1,5 @@
 Feature: DD test scenarios
-
+@regression
   Scenario Outline: DD login with Selenium WebDriver methods
     Given AnnaV launch <sApplicationName>
     Then AnnaV page title is <sPageName>

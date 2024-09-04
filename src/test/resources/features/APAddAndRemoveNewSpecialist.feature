@@ -1,6 +1,6 @@
 #Author: Anastasiia Prykhodko
 # JIRA ID JUL-392
-@medicenter
+@medicenter @regression
 Feature: Test Add And Delete Specialist https://medicenter-qa2.vercel.app/admin
   Background:
     Given I open url "https://medicenter-qa2.vercel.app/auth/sign_in"

@@ -8,7 +8,7 @@
       And Ruslan enters email and password
       And Ruslan click on Sign In
       Then Ruslan login has been successful
-
+    @regression
   Scenario: Make an appointment
   Given I click on element with xpath "//button[contains(text(),'Make an appointment')]"
   When I wait for element with xpath "//span[text()='Make an appointment']" to be present
