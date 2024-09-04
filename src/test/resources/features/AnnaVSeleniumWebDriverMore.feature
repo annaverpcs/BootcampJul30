@@ -1,3 +1,4 @@
+@medicenter
 Feature: Medical Center testing using Selenim WebDriver
 
   Scenario: Login to Medical Center With Selenium WebDriver methods

@@ -1,5 +1,5 @@
 #Author: Olga K.
-
+@medicenter
 Feature: Test Search Engine https://duckduckgo.com
 
   Scenario: Test https://duckduckgo.com search functionality
