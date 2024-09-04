@@ -1,7 +1,7 @@
 # author: Anna V
 #Medical Center testing
 
-
+@medicenter
 Feature: Medical Center Test Scenarios
   #Precondition for all scenarios in this Feature
   Background:

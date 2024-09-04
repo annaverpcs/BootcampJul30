@@ -1,5 +1,6 @@
+@medicenter
 Feature: Medical Center testing using Selenim WebDriver
-
+  @regression
   Scenario: Login to Medical Center With Selenium WebDriver methods
     Given AnnaV launch "MedicalCenterV2"
     Then AnnaV page title is "Medicenter"
