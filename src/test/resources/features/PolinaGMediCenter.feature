@@ -17,7 +17,7 @@ Feature: Medical Center testing
     And element with xpath "//h1[contains(text(),'Medical Center')]" should be displayed
     And I wait for 2 sec
 
-Feature: Delete my appointment as patient
+#Feature: Delete my appointment as patient
   Scenario: Delete my appointment
     Given I open url "https://medicenter-qa2.vercel.app/auth/sign_in"
     When I type "patientpcs1@gmail.com" into element with xpath "//input[@id='email']"
