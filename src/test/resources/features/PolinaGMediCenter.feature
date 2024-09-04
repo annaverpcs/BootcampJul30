@@ -1,5 +1,6 @@
+@medicenter
 Feature: Medical Center testing
-
+  @medicenter
   Scenario: Login as Administrator
     Given I open url "https://medicenter-qa2.vercel.app/"
     When I click on element with xpath "//button[contains(text(),'Login')]"
