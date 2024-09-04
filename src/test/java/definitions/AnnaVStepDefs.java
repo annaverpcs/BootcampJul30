@@ -13,8 +13,8 @@ public class AnnaVStepDefs {
     public void annavLaunch(String sApplicationName) {
         switch(sApplicationName) {
             case "MedicalCenterV2": //getDriver().get("https://medicenter-qa2.vercel.app/");
-                                    getDriver().get(xPathLibrary.sMedicalCenterURLV2);
-                                    break;
+                getDriver().get(xPathLibrary.sMedicalCenterURLV2);
+                break;
             case "MedicalCenterV1": getDriver().get(xPathLibrary.sMedicalCenterURLV1);
                 break;
             case "Google": getDriver().get(xPathLibrary.GoogleURL);
@@ -35,9 +35,9 @@ public class AnnaVStepDefs {
     public void annavClickOnButton(String sButtonName) {
         switch(sButtonName){
             case "Login": getDriver().findElement(By.xpath(xPathLibrary.sLoginButton)).click();
-                            break;
+                break;
             case "SignIn": getDriver().findElement(By.xpath(xPathLibrary.sSignInButton)).click();
-            break;
+                break;
             default:
                 System.out.println("There is no such button on the page");
 

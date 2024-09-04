@@ -19,6 +19,6 @@ public class TestRunner {
     }
 
     @AfterClass
-    public static void teardown() {
+    public static void quit() {
     }
 }
