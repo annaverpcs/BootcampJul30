@@ -27,9 +27,16 @@ Feature: Test Add And Delete Specialist https://medicenter-qa2.vercel.app/admin
     Then I type "16:00" into element with xpath "//input[@id='working_hours.monday.to']"
     Then I click on element with xpath "//button[@type='submit']"
     Then I refresh the page
+    Then I wait for 10 sec
     Then I wait for employee with name <sFullName> and role <sRole> to be present
+    Then I scroll to the element with xpath <xpathEmployeeDelete> with offset 10
+    Then I click on element with xpath <xpathEmployeeDelete>
+    And I wait for element with xpath "//button[text()='Remove specialist']" to be present
+    Then I click on element with xpath "//button[text()='Remove specialist']"
+    Then I wait for 10 sec
+    Then I wait for employee with name <sFullName> and role <sRole> to not be present
     Examples:
-      | sSpecialistFirstName | sSpecialistLastName      |  xpathRole                           |  xpathDay                   | sFullName         | sRole             |
-      | "JohnAP"             | "DoeAP"                  | "//option[@value='doctor']"          |  "//button[@id='monday']"   | "JohnAP DoeAP"    | "Doctor"          |
-      | "JohnAP1"            | "DoeAP!"                 | "//option[@value='doctor']"          |  "//button[@id='monday']"   | "JohnAP1 DoeAP!"  | "Doctor"          |
-      | "JohnAP!"            | "DoeAP1"                 | "//option[@value='ophthalmologist']" |  "//button[@id='monday']"   | "JohnAP! DoeAP1"  | "Ophthalmologist" |
+      | sSpecialistFirstName | sSpecialistLastName      |  xpathRole                           |  xpathDay                   | sFullName         | sRole             | xpathEmployeeDelete |
+      | "JohnAP"             | "DoeAP"                  | "//option[@value='nurse']"           |  "//button[@id='monday']"   | "JohnAP DoeAP"    | "Nurse"           | "//td[contains(text(),'JohnAP DoeAP')]/..//span[contains(text(), 'Nurse')]/../..//span[contains(text(), 'delete')]" |
+      | "JohnAP1"            | "DoeAP!"                 | "//option[@value='doctor']"          |  "//button[@id='monday']"   | "JohnAP1 DoeAP!"  | "Doctor"          | "//td[contains(text(),'JohnAP1 DoeAP!')]/..//span[contains(text(), 'Doctor')]/../..//span[contains(text(), 'delete')]" |
+      | "JohnAP!"            | "DoeAP1"                 | "//option[@value='ophthalmologist']" |  "//button[@id='monday']"   | "JohnAP! DoeAP1"  | "Ophthalmologist" |"//td[contains(text(),'JohnAP! DoeAP1')]/..//span[contains(text(), 'Ophthalmologist')]/../..//span[contains(text(), 'delete')]" |
