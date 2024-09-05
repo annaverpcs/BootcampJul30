@@ -25,4 +25,8 @@ public class AnastasiiaPStepDefs {
         new WebDriverWait(getDriver(), Duration.ofSeconds(10)).until(ExpectedConditions.not(ExpectedConditions.presenceOfAllElementsLocatedBy(By
                 .xpath("//td[contains(text(),'" + name + "')]/..//span[contains(text(), '" + role + "')]"))));
     }
+    @Then("AnastasiiaP wait for element with xpath {string} to not be present")
+    public void iWaitForElementWithXpathToNotBePresent(String xpath) {
+        new WebDriverWait(getDriver(), Duration.ofSeconds(10)).until(ExpectedConditions.not(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(xpath))));
+    }
 }
