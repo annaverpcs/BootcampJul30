@@ -1,6 +1,6 @@
 #Author: Anna Verkhovskaya
 # Jira ID 1233
-
+@medicenter
 Feature: Test Search Engine https://duckduckgo.com
 
   Scenario: Test https://duckduckgo.com search functionality

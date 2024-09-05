@@ -1,5 +1,6 @@
 #Author: Olga K.
 # Medical Center testing
+@medicenter
 Feature: Recreating patient's activity https://medicenter-qa2.vercel.app/
   
 Background:
